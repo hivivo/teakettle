@@ -1,0 +1,8 @@
+<md-card>
+  <section fxLayout="column" fxLayoutAlign="center center">
+    <md-spinner *ngIf="isLoading"></md-spinner>
+    <p *ngIf="!isLoading">
+      Enjoy the {{ name }}!
+    </p>
+  </section>
+</md-card>

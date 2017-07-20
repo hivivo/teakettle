@@ -1,0 +1,34 @@
+#!/usr/bin/env node
+
+'use strict';
+
+process.title = 'TeaKettle';
+process.on('unhandledRejection', r => console.error(r));
+
+const semver = require('semver');
+const events = require('events');
+
+if (semver.lt(process.version, 'v6.9.0')) {
+  var chalk = require('chalk');
+  console.log(chalk.red('ERR') + ': Your Node.js version is ' + chalk.bold(process.version) + '. Please update to the latest Node 6 LTS version (or latest Node).');
+  process.exit(1);
+}
+
+var cli = require('../lib/cli');
+
+let standardInput
+try {
+  standardInput = process.stdin;
+} catch (e) {
+  delete process.stdin;
+  process.stdin = new events.EventEmitter();
+  standardInput = process.stdin;
+}
+
+cli({
+  cliArgs: process.argv.slice(2),
+  inputStream: standardInput,
+  outputStream: process.stdout
+}).then(function (result) {
+  process.exit(typeof result === 'object' ? result.exitCode : result);
+});
