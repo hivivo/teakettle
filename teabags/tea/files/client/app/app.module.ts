@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MaterialModule } from '@angular/material';
+import { MatToolbarModule, MatCardModule, MatProgressSpinnerModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import 'hammerjs';
@@ -18,7 +18,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     CommonModule,
     HttpModule,
     FlexLayoutModule,
-    MaterialModule,
+    MatToolbarModule, MatCardModule, MatProgressSpinnerModule,
     BrowserAnimationsModule,
     RoutingModule
   ],
