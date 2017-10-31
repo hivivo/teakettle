@@ -4,7 +4,7 @@ This TEA (Typescript + ExpressJS + Angular4) with Material flavor was made by [T
 
 ## Run
 ### Development mode
-`teakettle serve dev` or `npm run dev`: [concurrently](https://github.com/kimmobrunfeldt/concurrently) execute TypeScript compiler, Express server and Angular build.
+`teakettle serve dev` or `npm run dev` or `npm start`: [concurrently](https://github.com/kimmobrunfeldt/concurrently) execute TypeScript compiler, Express server and Angular build.
 
 A window will automatically open at [localhost:4200](http://localhost:4200). Angular and Express files are being watched. Any change automatically creates a new bundle, restart Express server and reload your browser.
 

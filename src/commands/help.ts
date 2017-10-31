@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import * as chalk from 'chalk';
+import chalk from 'chalk';
 
 const Command = require('../../ember-cli/lib/models/command');
 const stringUtils = require('ember-cli-string-utils');

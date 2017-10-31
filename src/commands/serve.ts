@@ -1,5 +1,5 @@
 import { oneLine } from 'common-tags';
-import * as chalk from 'chalk';
+import chalk from 'chalk';
 
 const Command = require('../../ember-cli/lib/models/command');
 const SilentError = require('silent-error');

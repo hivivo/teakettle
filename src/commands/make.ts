@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import * as chalk from 'chalk';
+import chalk from 'chalk';
 import denodeify = require('denodeify');
 
 import BoilCommand from './boil';
@@ -11,7 +11,7 @@ const Command = require('../../ember-cli/lib/models/command');
 const Project = require('../../ember-cli/lib/models/project');
 const SilentError = require('silent-error');
 const figlet = require('figlet');
-const mkdir = denodeify(fs.mkdir);
+const mkdir = denodeify<string, void>(fs.mkdir as any);
 
 const MakeCommand = Command.extend({
   name: 'make',

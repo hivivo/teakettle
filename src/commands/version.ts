@@ -1,7 +1,7 @@
 const Command = require('../../ember-cli/lib/models/command');
 const figlet = require('figlet');
 import * as path from 'path';
-import * as chalk from 'chalk';
+import chalk from 'chalk';
 
 const VersionCommand = Command.extend({
   name: 'version',
